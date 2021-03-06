@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Create Snack</h1> <!-- Replace Snack with your model -->
+    <form action="" method="POST">
+        {% csrf_token %} <!-- Security token! Always add this to protect from Csrf attacks-->
+        {{ form.as_p }} <!-- .as_p = Form is rendering as a paragraph -->
+        <input type='submit' value='SAVE'>
+    </form>
+{% endblock content %}

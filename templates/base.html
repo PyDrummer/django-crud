@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snacks</title>
+        <!-- <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'snack_create' %}">Create Snack</a>
+            </nav>          
+        </header>
+        <h1>SNACKS!</h1>
+        {% block content %}
+        <!-- Anything inside this will be replaced by our other templates-->
+        {% endblock content %}
+    </body>
+</html>
