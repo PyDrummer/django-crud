@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Delete Movie</h1>
-    <form action="" method="POST">
+    <h1 class='block-h1'>Delete {{snack.title}}?</h1>
+    <form id='delete' action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <p>Do you really want to delete {{snack.name}} </p>
-        <input type="submit" value="OK">
+        <p id='p_delete'>Do you really want to delete {{snack.title}} ?</p>
+        <input class='update_delete' type="submit" value="YES">
     </form>
 {% endblock content %}
