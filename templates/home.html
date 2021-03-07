@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Snacks Page</h1>
-    <div>
+    <h1 class='block-h1'>Welcome to the Snacks home page</h1>
+
+    <div class='snacks'>
         <h2>Selected Snacks:</h2>
+        <p>Try clicking one to see more details</p>
         <ul>
         {% for snack in object_list %}
             <li><a href="{% url 'snack_details' snack.pk %}">{{snack.title}}</a></li>
         {% endfor %}
         </ul>
+    </div>
+    <div id='div_add'>
+        <a id='add_snack' href="{% url 'snack_create' %}">Add Snack!</a>
     </div>
 {% endblock content %}
